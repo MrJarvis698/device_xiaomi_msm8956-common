@@ -192,6 +192,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.2-service.clearkey
 
+# DumpState
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate@1.1-service-kenzo
+
 #Face  detection extension
 PRODUCT_PACKAGES += \
     org.codeaurora.camera
