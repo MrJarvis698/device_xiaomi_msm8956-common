@@ -23,6 +23,9 @@ vendor.voice.conc.fallbackpath=deep-buffer
 vendor.voice.playback.conc.disabled=true
 vendor.voice.record.conc.disabled=false
 
+#Apex
+ro.apex.updatable=true
+
 # Bluetooth
 bluetooth.hfp.client=1
 persist.vendor.bt.enable.splita2dp=false
