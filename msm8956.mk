@@ -369,9 +369,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service
 
-# Shim
+# Shims
 PRODUCT_PACKAGES += \
     libshims_dpmd \
+    libshims_imsrcsd \
     libshim_ims
 
 # Strip debug
