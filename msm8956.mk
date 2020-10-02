@@ -378,6 +378,7 @@ PRODUCT_PACKAGES += \
 
 # Shim
 PRODUCT_PACKAGES += \
+    libshims_dpmd \
     libshim_ims
 
 # Strip debug
