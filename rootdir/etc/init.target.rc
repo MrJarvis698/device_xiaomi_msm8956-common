@@ -199,6 +199,13 @@ service boot_log_avc /system/bin/logcat -e avc -f /cache/boot_log_avc.txt
     disabled
     oneshot
 
+service boot_log_manifest /system/bin/logcat -e "framework or device manifest" -D -f /cache/boot_log_manifest.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
 on post-fs-data
 # Clear existing log and start the service
     rm /cache/boot_log_full.txt
@@ -206,11 +213,13 @@ on post-fs-data
     rm /cache/boot_log_kernel.txt
     rm /cache/boot_log_radio.txt
     rm /cache/boot_log_avc.txt
+    rm /cache/boot_log_manifest.txt
     start boot_log
     start boot_log_crash
     start boot_log_kernel
     start boot_log_radio
     start boot_log_avc
+    start boot_log_manifest
 
 on property:sys.boot_completed=1
 # Stop the logger service
@@ -219,3 +228,4 @@ on property:sys.boot_completed=1
     stop boot_log_kernel
     stop boot_log_radio
     stop boot_log_avc
+    stop boot_log_manifest
