@@ -221,11 +221,11 @@ on post-fs-data
     start boot_log_avc
     start boot_log_manifest
 
-on property:sys.boot_completed=1
+#on property:sys.boot_completed=1
 # Stop the logger service
-    stop boot_log
-    stop boot_log_crash
-    stop boot_log_kernel
-    stop boot_log_radio
-    stop boot_log_avc
-    stop boot_log_manifest
+#    stop boot_log
+#    stop boot_log_crash
+#    stop boot_log_kernel
+#    stop boot_log_radio
+#    stop boot_log_avc
+#    stop boot_log_manifest
