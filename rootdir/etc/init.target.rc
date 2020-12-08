@@ -192,16 +192,25 @@ service boot_log_radio /system/bin/logcat -b radio -D -f /cache/boot_log_radio.t
     disabled
     oneshot
 
+service boot_log_avc /system/bin/logcat -e avc -f /cache/boot_log_avc.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
 on post-fs-data
 # Clear existing log and start the service
     rm /cache/boot_log_full.txt
     rm /cache/boot_log_crash.txt
     rm /cache/boot_log_kernel.txt
     rm /cache/boot_log_radio.txt
+    rm /cache/boot_log_avc.txt
     start boot_log
     start boot_log_crash
     start boot_log_kernel
     start boot_log_radio
+    start boot_log_avc
 
 on property:sys.boot_completed=1
 # Stop the logger service
@@ -209,3 +218,4 @@ on property:sys.boot_completed=1
     stop boot_log_crash
     stop boot_log_kernel
     stop boot_log_radio
+    stop boot_log_avc
