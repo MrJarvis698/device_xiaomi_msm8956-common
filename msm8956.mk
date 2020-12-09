@@ -157,6 +157,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-service-custom
 
+#Contexthub
+PRODUCT_PACKAGES += \
+    android.hardware.contexthub@1.0-impl \
+    android.hardware.contexthub@1.0-service 
+
 # DataServices
 PRODUCT_PACKAGES += \
     librmnetctl
