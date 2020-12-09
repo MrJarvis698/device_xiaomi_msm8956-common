@@ -267,6 +267,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance_little_big.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance_little_big.conf
 
+#Input
+PRODUCT_PACKAGES += \
+    android.hardware.input.classifier@1.0-impl \
+    android.hardware.input.classifier@1.0-service 
+
 # Keymaster HAL
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
