@@ -367,6 +367,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.ril_log_enabled=1 \
+    persist.vendor.radio.ril_extra_debug=1 \
+    persist.vendor.radio.poweron_opt=1
+
 # Seccomp policy
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
